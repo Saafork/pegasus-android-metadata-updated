@@ -96,9 +96,8 @@ We're also including a Retroarch configuration preset that will do the following
 This configuration is based on [RGC RG552 Linux Setup](https://retrogamecorps.com/2021/12/27/anbernic-rg552-linux-setup-guide/)
 
 # Installing this pack
-Run the following:
-pkg install termux-am
-termux-setup-storage
+Run the following without quotes in termux:
+"pkg install termux-am && termux-setup-storage"
 Then, download setup.sh and run it.
 # Some Tips
 
