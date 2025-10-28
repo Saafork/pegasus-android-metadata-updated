@@ -59,7 +59,7 @@ echo -e "${GREEN}OK${NONE}"
 echo "### Cloning the git repo"  &>> ~/storage/shared/pegasus_installer_log.log
 echo -e "Downloading Metadata Pack for Android, please be patient..."
 #Download Pegasus Metadata files
-git clone https://github.com/dragoonDorise/pegasus-android-metadata.git ~/dragoonDoriseTools/pegasus-android-metadata
+git clone https://github.com/Saafork/pegasus-android-metadata-updated.git ~/dragoonDoriseTools/pegasus-android-metadata
 #Validate
 FOLDER=~/dragoonDoriseTools/pegasus-android-metadata/
 if [ -d "$FOLDER" ]; then
@@ -68,13 +68,7 @@ if [ -d "$FOLDER" ]; then
 else
 	echo "### Termux Mirrors down"  &>> ~/storage/shared/pegasus_installer_log.log
 	echo -e "${RED}ERROR${NONE}"
-	echo -e "It seems Termux repositories are down. Let's fix it"
-	echo -e "When you press the ${RED}A button${NONE} selector will open. In the first screen ${BOLD}select all three options with the ${GREEN}Y button${NONE} and then Accept using the ${RED}A button${NONE}${NONE}"
-	echo -e "Then in the next screen select the first option and press the ${RED}A button${NONE}"
-	read pause
-	termux-change-repo
-	pkg update -y -F &>> ~/storage/shared/pegasus_installer_log.log && pkg upgrade -y -F &>> ~/storage/shared/pegasus_installer_log.log
-	pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y  &>> ~/storage/shared/pegasus_installer_log.log
+	echo -e "Try again later."
 	
 	
 fi
@@ -112,8 +106,8 @@ roottext=yellow,red"
 	handheldModel=$(whiptail --title "What Android Device do you have" \
    --radiolist "Move using your DPAD and select your platforms with the Y button. Press the A button to select." 10 80 4 \
 	"RG552" "Anbernic RG552" OFF \
-	"ODIN" "16:9 Devices like Odin or RP3" OFF \
-	"RP2+" "4:3 Devices Like RP2+ and RG553" OFF \
+	"ODIN2" "16:9 Devices like Odin 2 or RP5" OFF \
+	"RPM" "4:3 Devices Like RPM and RG477M" OFF \
 	"ANDROID" "A regular Android Device" OFF \
    3>&1 1<&2 2>&3)
 	case $handheldModel in
@@ -136,8 +130,8 @@ while true; do
 	handheldModel=$(whiptail --title "What Android Device do you have" \
 	   --radiolist "Move using your DPAD and select your platforms with the Y button. Press the A button to select." 10 80 4 \
 		"RG552" "Anbernic RG552" OFF \
-		"ODIN" "AYN Odin" OFF \
-		"RP2+" "Retroid Pocket 2+" OFF \
+		"ODIN2" "AYN Odin" OFF \
+		"RPM" "Retroid Pocket Mini" OFF \
 		"ANDROID" "A regular Android Device" OFF \
 	   3>&1 1<&2 2>&3)
 done
@@ -152,16 +146,13 @@ echo "### Downloading Pegasus "  &>> ~/storage/shared/pegasus_installer_log.log
 
 #Download Pegasus
 echo -e "Downloading Pegasus, please be patient..."
-wget   -q --show-progress https://github.com/mmatyas/pegasus-frontend/releases/download/weekly_2022w30/pegasus-fe_alpha16-42-g996720eb_android.apk -P ~/dragoonDoriseTools
+wget   -q --show-progress https://github.com/mmatyas/pegasus-frontend/releases/download/weekly_2024w38/pegasus-fe_alpha16-82-gc3462e68_android64.apk -P ~/dragoonDoriseTools
 echo "### Pegasus downloaded"  &>> ~/storage/shared/pegasus_installer_log.log
 
 echo -e  "Now let's install ${RED}Pegasus${NONE}"
-echo -e  "Press the ${RED}A button${NONE} to install Pegasus, when Pegasus is installed click ${BOLD}DONE${NONE} in the installation window so you can come back to continue the next steps"
+echo -e  "Press the ${RED}A button${NONE} to install Pegasus, when Pegasus is installed open in the file manager in settings and click the apk. Then click ${BOLD}DONE${NONE} in the installation window so you can come back to continue the next steps"
 read pause
 clear
-echo -ne  "Installing ${RED}Pegasus${NONE}..."
-#Launch Pegasus
-xdg-open ~/dragoonDoriseTools/pegasus-fe_alpha16-42-g996720eb_android.apk
 echo -e  "${GREEN}OK${NONE}"
 echo ""
 echo "### Pegasus installed"  &>> ~/storage/shared/pegasus_installer_log.log
