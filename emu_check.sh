@@ -30,13 +30,13 @@ if [ -d "$FOLDER" ]; then
 	hasRetroArch=true
 fi
 
-#Aether?
+#Nether?
 FOLDER=~/storage/shared/Android/data/xyz.aethersx2.android
 if [ -d "$FOLDER" ]; then
 	hasAether=true
 fi
-#Citra?
-FOLDER=~/storage/shared/citra-emu
+#Azahar?
+FOLDER=~/storage/shared/Azahar
 if [ -d "$FOLDER" ]; then
 	hasCitra=true
 fi
@@ -77,8 +77,8 @@ FOLDER=~/storage/shared/DraStic
 if [ -d "$FOLDER" ]; then
 	hasDrastic=true
 fi
-#DolphinMMJ
-FOLDER=~/storage/shared/dolphin-mmjr
+#Dolphin
+FOLDER=~/storage/shared/dolphin-mmjr2
 if [ -d "$FOLDER" ]; then
 	hasDolphinMMJ=true
 fi
@@ -119,7 +119,7 @@ fi
 #Only ODIN & ANDROID
 if [[ $handheldModel == "ODIN" ]] || [[ $handheldModel == "ANDROID" ]]; then
 	echo "### Emus only for ODIN $ Android "  &>> ~/storage/shared/pegasus_installer_log.log
-	echo -ne "PS2 - AetherSX2..."
+	echo -ne "PS2 - netherSX2..."
 	if [ $hasAether == true ]; then
 		echo -e  "${GREEN}Installed${NONE}"
 	else
@@ -131,7 +131,7 @@ if [[ $handheldModel == "ODIN" ]] || [[ $handheldModel == "ANDROID" ]]; then
 	else
 		echo -e  "${RED}Not installed${NONE}"
 	fi
-	echo -ne "Nintendo Wii & GameCube - Dolphin MMJR..."
+	echo -ne "Nintendo Wii & GameCube - Dolphin..."
 	if [ $hasDolphinMMJ == true ]; then
 		echo -e  "${GREEN}Installed${NONE}"
 	else
@@ -203,10 +203,10 @@ fi
 if [ $hasRetroArch == false ]; then
 	echo -e "Multisystem - RetroArch..."
 	echo ""
-	wget  -q --show-progress https://buildbot.libretro.com/stable/1.10.3/android/RetroArch.apk -P ~/dragoonDoriseTools/
+	wget  -q --show-progress https://buildbot.libretro.com/stable/1.21.0/android/RetroArch_aarch64.apk -P ~/storage/shared/
 	echo ""
 	echo -e "We need to install RetroArch before we can continue..."
-	echo -e  "When RetroArch is installed click ${BOLD}OPEN${NONE} in the installation window so RetroArch is opened."
+	echo -e  "When RetroArch is installed open your home folder in a file browser, then click the file. Then click ${BOLD}OPEN${NONE} in the installation window so RetroArch is opened."
 	echo -e  "Wait for Retroarch files to be downloaded, then quit Retroarch and come back here."
 	echo -e  "Press the ${RED}A button${NONE} to install RetroArch now"
 	read pause
@@ -222,18 +222,17 @@ if [ $hasRedDream == false ]; then
 	
 fi
 if [ $hasDolphinMMJ == false ]; then
-	echo -e "Nintendo Wii & GameCube - Dolphin MMJR..."
-	wget  -q --show-progress https://github.com/Bankaimaster999/Dolphin-MMJR/releases/download/1.0-11505/app-release.apk -P ~/dragoonDoriseTools/
-	echo -e  "Press the ${RED}A button${NONE} to install Dolphin"
+	echo -e "Nintendo Wii & GameCube - Dolphin MMJR2..."
+	wget  -q --show-progress https://github.com/Medard22/Dolphin-MMJR2-VBI/releases/download/U24.07.02-2407/Dolphin.MMJR2-VBI-U24.07.02-2407.apk -P ~/storage/shared/
+	echo -e  "Open your file browser in the home folder."
 	read pause		
-	xdg-open ~/dragoonDoriseTools/app-release.apk
 	echo -e  "Press the ${RED}A button${NONE} to install the next emulator"
 	read pause
 fi
 
 if [ $hasYaba == false ]; then
 	echo -e "Saturn - Yaba Sanshiro 2 Pro..."
-	termux-open "https://play.google.com/store/apps/details?id=org.devmiyax.yabasanshioro2.pro"
+	termux-open "https://play.google.com/store/apps/details?id=org.devmiyax.yabasanshioro2"
 	echo -e  "Press the ${RED}A button${NONE} to install the next emulator"
 	read pause
 fi
@@ -257,22 +256,23 @@ if [ $hasDuckstation == false ]; then
 fi
 if [ $hasAether == false ]; then
 	echo -e "Playstation2 - AetherSX2..."	
-	termux-open "https://play.google.com/store/apps/details?id=xyz.aethersx2.android"
+	wget  -q --show-progress https://github.com/Trixarian/NetherSX2-patch/releases/download/2.2b/NetherSX2-v2.2b-4248.apk -P ~/storage/shared/
+	echo -e  "Open your file browser in the home folder."
 	echo -e  "Press the ${RED}A button${NONE} to install the next emulator"
 	read pause
 fi
 if [ $hasDrastic == false ]; then
 	echo -e "Nintendo DS - Drastic..."
-	termux-open "https://play.google.com/store/apps/details?id=com.dsemu.drastic"
+	wget  -q --show-progress https://archive.org/download/drasticemulator/109/base.apk -P ~/storage/shared/
+	echo -e  "Open your file browser in the home folder."
 	echo -e  "Press the ${RED}A button${NONE} to install the next emulator"
 	read pause
 fi
 if [ $hasCitra == false ]; then
 	echo -e "Nintendo 3DS - Citra MMJ..."		
-	wget  -q --show-progress https://github.com/weihuoya/citra/releases/download/20220902/Citra_MMJ_20220902.apk -P ~/dragoonDoriseTools/
+	termux-open "https://play.google.com/store/apps/details?id=io.github.lime3ds.android"
 	echo -e  "Press the ${RED}A button${NONE} to install Citra MMJ"
 	read pause				
-	xdg-open ~/dragoonDoriseTools/Citra_MMJ_20220902.apk
 fi
 
 echo "### Downloading missing emulator finish "  &>> ~/storage/shared/pegasus_installer_log.log
