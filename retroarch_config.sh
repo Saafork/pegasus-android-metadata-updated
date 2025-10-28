@@ -11,10 +11,8 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 BLINK='\x1b[5m'
 
-hasRetroArch64=false
-FOLDER64=~/storage/shared/Android/data/com.retroarch.aarch64
-if [ -d "$FOLDER64" ]; then
-	hasRetroArch64=true
+
+hasRetroArch64=true
 fi
 
 handheldModel=$(cat ~/dragoonDoriseTools/.device)
@@ -370,7 +368,7 @@ if [[ $handheldModel == "RG552" ]]; then
 
 fi
 
-if [[ $handheldModel == "ODIN" ]]; then
+if [[ $handheldModel == "*" ]]; then
 	echo "### RA Odin config "  &>> ~/storage/shared/pegasus_installer_log.log
 	echo -e ""
 	echo -e "ODIN Special configuration..."
