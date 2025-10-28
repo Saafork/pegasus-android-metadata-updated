@@ -306,7 +306,7 @@ echo "### Rom folders created"  &>> ~/storage/shared/pegasus_installer_log.log
 #Retroarch 64? We edit the metadatafiles
 echo "### RA64 detection "  &>> ~/storage/shared/pegasus_installer_log.log
 
-hasRetroArch64=false
+hasRetroArch64=true
 FOLDER64=~/storage/shared/Android/data/com.retroarch.aarch64
 if [ -d "$FOLDER64" ]; then
 	hasRetroArch64=true
