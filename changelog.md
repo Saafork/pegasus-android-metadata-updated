@@ -110,3 +110,7 @@
   1.3.5
 
 - Android 11 experimental compatibility
+
+  1.3.6
+  
+- Updated emulators
