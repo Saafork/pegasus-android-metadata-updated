@@ -13,7 +13,6 @@ BLINK='\x1b[5m'
 
 
 hasRetroArch64=false
-fi
 
 handheldModel=$(cat ~/dragoonDoriseTools/.device)
 useInternalStorage=false
