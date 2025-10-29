@@ -62,7 +62,7 @@ if [ -d "$FOLDER" ] || [ -d "$FOLDERPRO" ]; then
 	hasMupen=true
 fi
 #PPSSPP
-FOLDER=~/storage/shared/Android/data/org.ppsspp.ppsspp
+FOLDER=~/storage/shared/PPSSPP
 FOLDERGOLD=~/storage/shared/Android/data/org.ppsspp.ppssppgold
 if [ -d "$FOLDER" ] || [ -d "$FOLDERGOLD" ]; then
 	hasPPSSPP=true
@@ -78,7 +78,7 @@ if [ -d "$FOLDER" ]; then
 	hasDrastic=true
 fi
 #Dolphin
-FOLDER=~/storage/shared/dolphin-mmjr2
+FOLDER=~/storage/shared/mmjr2-vbi
 if [ -d "$FOLDER" ]; then
 	hasDolphinMMJ=true
 fi
@@ -125,7 +125,7 @@ if [[ $handheldModel == "ODIN" ]] || [[ $handheldModel == "ANDROID" ]]; then
 	else
 		echo -e  "${RED}Not installed${NONE}"
 	fi		
-	echo -ne "3DS - Citra..."
+	echo -ne "3DS - Azahar..."
 	if [ $hasCitra == true ]; then
 		echo -e  "${GREEN}Installed${NONE}"
 	else
@@ -144,7 +144,7 @@ fi
 #Only on Rp2+
 if [[ $handheldModel == "RP2+" ]]; then	
 	echo "### RP2+ Only Emus "  &>> ~/storage/shared/pegasus_installer_log.log	
-	echo -ne "Nintendo Wii & GameCube - Dolphin MMJR..."
+	echo -ne "Nintendo Wii & GameCube - Dolphin MMJR2..."
 	if [ $hasDolphinMMJ == true ]; then
 		echo -e  "${GREEN}Installed${NONE}"
 	else
@@ -203,14 +203,11 @@ fi
 if [ $hasRetroArch == false ]; then
 	echo -e "Multisystem - RetroArch..."
 	echo ""
-	wget  -q --show-progress https://buildbot.libretro.com/stable/1.21.0/android/RetroArch_aarch64.apk -P ~/storage/shared/
+	wget  -q --show-progress https://buildbot.libretro.com/stable/1.21.0/android/RetroArch.apk -P ~/storage/shared/
 	echo ""
 	echo -e "We need to install RetroArch before we can continue..."
 	echo -e  "When RetroArch is installed open your home folder in a file browser, then click the file. Then click ${BOLD}OPEN${NONE} in the installation window so RetroArch is opened."
 	echo -e  "Wait for Retroarch files to be downloaded, then quit Retroarch and come back here."
-	echo -e  "Press the ${RED}A button${NONE} to install RetroArch now"
-	read pause
-	xdg-open ~/dragoonDoriseTools/RetroArch.apk
 	echo -e  "Press the ${RED}A button${NONE} to install the next emulator"
 	read pause
 fi
@@ -224,8 +221,7 @@ fi
 if [ $hasDolphinMMJ == false ]; then
 	echo -e "Nintendo Wii & GameCube - Dolphin MMJR2..."
 	wget  -q --show-progress https://github.com/Medard22/Dolphin-MMJR2-VBI/releases/download/U24.07.02-2407/Dolphin.MMJR2-VBI-U24.07.02-2407.apk -P ~/storage/shared/
-	echo -e  "Open your file browser in the home folder."
-	read pause		
+	echo -e  "Open your file browser in the home folder."		
 	echo -e  "Press the ${RED}A button${NONE} to install the next emulator"
 	read pause
 fi
@@ -263,13 +259,13 @@ if [ $hasAether == false ]; then
 fi
 if [ $hasDrastic == false ]; then
 	echo -e "Nintendo DS - Drastic..."
-	wget  -q --show-progress https://archive.org/download/drasticemulator/109/base.apk -P ~/storage/shared/
+	wget  -q --show-progress https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8846140&key=cd1bbf4a48280e1576a7828ddc6392fa81395820&forcebaseapk=true -P ~/storage/shared/
 	echo -e  "Open your file browser in the home folder."
 	echo -e  "Press the ${RED}A button${NONE} to install the next emulator"
 	read pause
 fi
 if [ $hasCitra == false ]; then
-	echo -e "Nintendo 3DS - Citra MMJ..."		
+	echo -e "Nintendo 3DS - Azahar..."		
 	termux-open "https://play.google.com/store/apps/details?id=io.github.lime3ds.android"
 	echo -e  "Press the ${RED}A button${NONE} to install Citra MMJ"
 	read pause				
