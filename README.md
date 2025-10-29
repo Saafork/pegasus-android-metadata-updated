@@ -25,7 +25,7 @@ This pack offers support for the following systems with their respective emulato
 | GameBoy Advance           | Retroarch 1.9 mGBA core                  | Working     | Yes    |
 | GameCube                  | Dolphin                                  | Working     | -      |
 | Dos                       | Retroarch 1.9 DOSBox core                | Not tested  | No     |
-| Dreamcast                 | Reddream                                 | Working     | -      |
+| Dreamcast                 | Redream                                  | Working     | -      |
 | Final Burn Neo            | Retroarch 1.9 Fbn core                   | Working     | No     |
 | Mame 2003 Plus            | Retroarch 1.9 Mame 2003 Plus core        | Working     | Yes    |
 | Master System             | Retroarch 1.9 Genesis Plus GX core       | Working     | Yes    |
@@ -33,13 +33,13 @@ This pack offers support for the following systems with their respective emulato
 | Neo Geo CD                | Retroarch 1.9 Fbn core                   | Not Working | No     |
 | Neo Geo Pocket & Color    | Retroarch 1.9 Beetle NeoPop              | Working     | Yes    |
 | Nintendo DS               | Drastic                                  | Working     | Yes    |
-| Nintendo 3DS              | Citra                                    | Working     | Yes    |
+| Nintendo 3DS              | Azahar                                   | Working     | Yes    |
 | Nintendo NES              | Retroarch 1.9 Nestopia core              | Working     | Yes    |
-| Nintendo 64               | Mupen64plus FZ                           | Working     | -      |
-| Nintendo Wii              | Dolphin                                  | Working     | -      |
+| Nintendo 64               | Mupen64Plus FZ Free/Pro                  | Working     | -      |
+| Nintendo Wii              | Dolphin MMJR2-VBI                        | Working     | -      |
 | PC engine                 | Retroarch 1.9 Mednafen pce fast core     | Working     | Yes    |
 | Playstation               | Retroarch 1.9 PCSX Rearmed core          | Working     | Yes    |
-| Playstation 2             | Aether SX2                               | Working     | -      |
+| Playstation 2             | NetherSX2 Classic                        | Working     | -      |
 | PSP                       | PPSSPP                                   | Working     | -      |
 | ScummVM                   | Retroarch 1.9 Scummvm core               | Working     | Yes    |
 | Sega 32X                  | Retroarch 1.9 PicoDrive core             | Working     | Yes    |
@@ -47,7 +47,7 @@ This pack offers support for the following systems with their respective emulato
 | Sega Game Gear            | Retroarch 1.9 Genesis Plus GX core       | Working     | Yes    |
 | Sega Genesis / Mega Drive | Retroarch 1.9 Genesis Plus GX core       | Working     | Yes    |
 | Sega Genesis Widescreen   | Retroarch 1.9 Genesis Plus GX Wide core  | Working     | -      |
-| Sega Saturn               | Yaba Sanshiro 2 Pro                      | Working     | -      |
+| Sega Saturn               | Yaba Sanshiro 2 Free/Pro                 | Working     | -      |
 | Super Nintendo            | Retroarch 1.9 Snes9x Current core        | Working     | Yes    |
 | Super Nintendo Widescreen | Retroarch 1.9 bsnes hd beta Current core | Working     | -      |
 | Wonderswan & Color        | Retroarch 1.9 Beetle Cygne core          | Not tested  | No     |
