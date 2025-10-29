@@ -6,7 +6,7 @@
 
 Component used on Pegasus Installer for configuration & installation automation for Pegasus Frontend.
 
-Website: [Pegasus Installer](https://www.pegasus-installer.com) 
+Website: [Pegasus Installer (dead link)](https://www.pegasus-installer.com) 
 
 ## Pegasus Metadata
 
@@ -77,10 +77,6 @@ Keep in mind not all Android Handhelds are powerful enough to run all those syst
 
 [RG552 Compatibility List](https://tinyurl.com/RG552GameSettings)
 
-[Retroid Pocket 2+ Compatibility List](https://tinyurl.com/RP2PlusGameSettings)
-
-[Powkiddy X18S Compatibility List](https://tinyurl.com/X18SGameSettings)
-
 ## Retroarch configuration
 
 We're also including a Retroarch configuration preset that will do the following:
@@ -97,7 +93,7 @@ This configuration is based on [RGC RG552 Linux Setup](https://retrogamecorps.co
 
 # Installing this pack
 Run the following without quotes in termux:
-"pkg install termux-am && termux-setup-storage"
+pkg install termux-am && termux-setup-storage && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Saafork/pegasus-android-metadata-updated/refs/heads/main/setup.sh)"
 Then, download setup.sh and run it.
 # Some Tips
 
