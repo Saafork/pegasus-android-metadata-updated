@@ -12,7 +12,7 @@ UNDERLINE='\033[4m'
 BLINK='\x1b[5m'
 
 
-hasRetroArch64=true
+hasRetroArch64=false
 fi
 
 handheldModel=$(cat ~/dragoonDoriseTools/.device)
@@ -368,7 +368,7 @@ if [[ $handheldModel == "RG552" ]]; then
 
 fi
 
-if [[ $handheldModel == "*" ]]; then
+if [[ $handheldModel == "ODIN" ]]; then
 	echo "### RA Odin config "  &>> ~/storage/shared/pegasus_installer_log.log
 	echo -e ""
 	echo -e "ODIN Special configuration..."
