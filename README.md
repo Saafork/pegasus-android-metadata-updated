@@ -92,9 +92,8 @@ We're also including a Retroarch configuration preset that will do the following
 This configuration is based on [RGC RG552 Linux Setup](https://retrogamecorps.com/2021/12/27/anbernic-rg552-linux-setup-guide/)
 
 # Installing this pack
-Run the following in termux
+Run the following in termux:
 `pkg install termux-am && termux-setup-storage && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Saafork/pegasus-android-metadata-updated/refs/heads/main/setup.sh)"`
-Then, download setup.sh and run it.
 # Some Tips
 
 There are some some tips that can help you manage your collection Better.
