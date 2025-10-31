@@ -162,7 +162,7 @@ if [[ $handheldModel == "RG552" ]] || [[ $handheldModel == "ANDROID" ]]; then
 	else
 		echo -e  "${RED}Not installed${NONE}"
 	fi
-	echo -ne "Dreamcast - RedDream..."
+	echo -ne "Dreamcast - ReDream..."
 	if [ $hasRedDream == true ]; then
 		echo -e  "${GREEN}Installed${NONE}"
 	else
@@ -259,7 +259,7 @@ if [ $hasAether == false ]; then
 fi
 if [ $hasDrastic == false ]; then
 	echo -e "Nintendo DS - Drastic..."
-	wget  -q --show-progress https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8846140&key=cd1bbf4a48280e1576a7828ddc6392fa81395820&forcebaseapk=true -P ~/storage/shared/
+	wget  -q --show-progress https://archive.org/download/com.dsemu.drastic_r2.6.0.4a-109_minapi14armeabi-v7anodpi_apkmirror.com/com.dsemu.drastic_r2.6.0.4a-109_minAPI14%28armeabi-v7a%29%28nodpi%29_apkmirror.com.apk -P ~/storage/shared/
 	echo -e  "Open your file browser in the home folder."
 	echo -e  "Press the ${RED}A button${NONE} to install the next emulator"
 	read pause
@@ -267,7 +267,7 @@ fi
 if [ $hasCitra == false ]; then
 	echo -e "Nintendo 3DS - Azahar..."		
 	termux-open "https://play.google.com/store/apps/details?id=io.github.lime3ds.android"
-	echo -e  "Press the ${RED}A button${NONE} to install Citra MMJ"
+	echo -e  "Press the ${RED}A button${NONE} to install Azahar"
 	read pause				
 fi
 
