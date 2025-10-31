@@ -1,5 +1,7 @@
 # Work in progress, only for testing purposes!
 
+16:9 ONLY!
+
 <img src="https://github.com/dragoonDorise/RP-epic-noir/blob/main/screenshots/hero-odin.jpg?raw=true">
 
 ## Android - Pegasus metadata pack
