@@ -99,42 +99,10 @@ chmod +x "$PATH"/maxcso &>> ~/storage/shared/pegasus_installer_log.log
 
 echo "### Handheld selection "  &>> ~/storage/shared/pegasus_installer_log.log
 
-while true; do
-export NEWT_COLORS="
-root=,red
-roottext=yellow,red"
-	handheldModel=$(whiptail --title "What Android Device do you have" \
-   --radiolist "Move using your DPAD and select your platforms with the Y button. Press the A button to select." 10 80 4 \
-	"RG552" "Anbernic RG552" OFF \
-	"ODIN2" "16:9 Devices like Odin 2 or RP5" OFF \
-	"RPM" "4:3 Devices Like RPM and RG477M" OFF \
-	"ANDROID" "A regular Android Device" OFF \
-   3>&1 1<&2 2>&3)
-	case $handheldModel in
-		[RG552]* ) break;;
-		[ODIN]* ) break;;
-		[RP2+]* ) break;;
-		[ANDROID]* ) break;;
-		* ) echo "Please answer yes or no.";;
-	esac
- done
-echo "### HandHeld Selected : ${handheldModel} "  &>> ~/storage/shared/pegasus_installer_log.log
-while true; do
-	#touch ~/dragoonDoriseTools/.device
-	echo $handheldModel > ~/dragoonDoriseTools/.device
-	echo "### Handlheld selection failed first time"  &>> ~/storage/shared/pegasus_installer_log.log
-	FILE=~/dragoonDoriseTools/.device
-	if [ -f "$FILE" ]; then
-		break;
-	fi
-	handheldModel=$(whiptail --title "What Android Device do you have" \
-	   --radiolist "Move using your DPAD and select your platforms with the Y button. Press the A button to select." 10 80 4 \
-		"RG552" "Anbernic RG552" OFF \
-		"ODIN2" "AYN Odin" OFF \
-		"RPM" "Retroid Pocket Mini" OFF \
-		"ANDROID" "A regular Android Device" OFF \
-	   3>&1 1<&2 2>&3)
-done
+
+echo "### HandHeld Selected : ODIN "  &>> ~/storage/shared/pegasus_installer_log.log
+echo ODIN > ~/dragoonDoriseTools/.device
+	
 
 cat ~/dragoonDoriseTools/pegasus-android-metadata/logo.ans
 
